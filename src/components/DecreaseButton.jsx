@@ -1,15 +1,9 @@
-import React from "react";
+import { useDispatch } from "react-redux";
+import { decrease } from "../counterSlice";
 
-const DecreaseButton = ({ setCount, count }) => {
-  const decrease = () => {
-    setCount(count - 1);
-  };
-  return (
-    <div>
-      {" "}
-      <button onClick={decrease}>-</button>
-    </div>
-  );
+const DecreaseButton = () => {
+  const dispatch = useDispatch();
+  return <button onClick={() => dispatch(decrease())}>-</button>;
 };
 
 export default DecreaseButton;

@@ -1,12 +1,11 @@
-import React from "react";
 import AddButton from "./AddButton";
 import DecreaseButton from "./DecreaseButton";
 
-const ButtonContainer = ({ setCount, count }) => {
+const ButtonContainer = () => {
   return (
     <div>
-      <AddButton setCount={setCount} count={count} />
-      <DecreaseButton setCount={setCount} count={count} />
+      <AddButton />
+      <DecreaseButton />
     </div>
   );
 };
